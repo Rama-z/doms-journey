@@ -1,0 +1,48 @@
+* {
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+@keyframes rolling-around {
+  0% {
+    transform: translateX(0);
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateX(-50px);
+    transform: translateY(100px);
+  }
+
+  50% {
+    transform: translateX(0px);
+    transform: translateY(0px);
+  }
+
+  75% {
+    transform: translateX(50px);
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateX(0);
+    transform: translateY(0);
+    transform: translateZ(0);
+  }
+}
+
+.animate {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation-name: rolling-around;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}

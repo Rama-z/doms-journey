@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Particle Simulation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="creative.css" />
+  </head>
+  <body>
+    <!-- <div class="animate">Hello World</div> -->
+    <!-- <canvas id="canvas" width="800" height="600"></canvas>
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+
+      // Load the WebAssembly module
+      Module.onRuntimeInitialized = async () => {
+        // Initialize particles
+        Module._initParticles();
+
+        // Animation loop
+        function animate() {
+          // Clear canvas
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          // Update particle positions in C
+          Module._updateParticles();
+
+          // Get particle positions
+          const positions = new Float32Array(
+            Module.HEAPF32.buffer,
+            Module._getParticlePositions(),
+            1000 * 2
+          );
+
+          // Draw particles
+          ctx.fillStyle = "blue";
+          for (let i = 0; i < positions.length; i += 2) {
+            ctx.beginPath();
+            ctx.arc(positions[i], positions[i + 1], 2, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          requestAnimationFrame(animate);
+        }
+
+        animate();
+      };
+    </script>
+    <script src="particle.js"></script> -->
+
+    <canvas id="creative-canvas"></canvas>
+
+    <script src="script.js"></script>
+  </body>
+</html>
